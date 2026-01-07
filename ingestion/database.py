@@ -1,53 +1,57 @@
-import os
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
-from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy import Column, Integer, String, Float, Date, DateTime, Boolean, Text
-import asyncio
+from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy import Column, Integer, String, Float, ForeignKey
 
-# Database URL from environment variable or default
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./healthcare.db")
+# Database Configuration
+DATABASE_URL = "sqlite+aiosqlite:///./healthcare.db"
 
-engine = create_async_engine(DATABASE_URL, echo=True)
-AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 Base = declarative_base()
 
-class SalaryEntry(Base):
-    __tablename__ = "salaries"
-
+class SunshineEntry(Base):
+    __tablename__ = "sunshine_list"
+    
     id = Column(Integer, primary_key=True, index=True)
-    year = Column(Integer, nullable=False)
-    sector = Column(String, nullable=False)
-    employer = Column(String, nullable=False)
-    job_title = Column(String, nullable=False)
-    salary_paid = Column(Float, nullable=False)
-    taxable_benefits = Column(Float)
-    role_category = Column(String, nullable=True) # To be filled by AI: Clinical, Support, Bureaucracy
-
-class WaitTimeEntry(Base):
-    __tablename__ = "wait_times"
-
-    id = Column(Integer, primary_key=True, index=True)
-    date_recorded = Column(Date, nullable=False)
-    procedure_type = Column(String, nullable=False) # e.g., MRI, CT, Hip Replacement
-    hospital_name = Column(String, nullable=True)
-    median_wait_days = Column(Integer, nullable=False)
-    province = Column(String, default="Ontario")
+    year = Column(Integer, index=True, default=2023)  # Added for historical analysis
+    sector = Column(String, index=True)
+    employer = Column(String, index=True)
+    job_title = Column(String)
+    salary = Column(Float)
+    benefits = Column(Float)
+    classification = Column(String, index=True) # 'clinical', 'bureaucratic', 'unknown'
 
 class LobbyingEntry(Base):
-    __tablename__ = "lobbying"
-
+    __tablename__ = "lobbying_registry"
+    
     id = Column(Integer, primary_key=True, index=True)
-    date = Column(Date, nullable=False)
-    lobbyist_name = Column(String, nullable=False)
-    client_org = Column(String, nullable=False)
-    government_institution = Column(String, nullable=False)
-    subject_matter = Column(String, nullable=False)
-    meeting_category = Column(String, nullable=True)
+    lobbyist_name = Column(String, index=True)
+    client_org = Column(String, index=True)
+    government_institution = Column(String, index=True)
+    subject_matter = Column(String)
+    date = Column(String)
+
+class WorkforceDemographics(Base):
+    __tablename__ = "workforce_demographics"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    profession = Column(String, index=True) # e.g. "Registered Nurse", "Physician"
+    year = Column(Integer, index=True)
+    average_age = Column(Float)
+    percent_over_55 = Column(Float)
+    source = Column(String)
+
+class BudgetBreakdown(Base):
+    __tablename__ = "budget_breakdown"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    year = Column(Integer, index=True)
+    category = Column(String, index=True) # e.g. "Hospitals", "OHIP", "Opaque/Other"
+    amount_billions = Column(Float)
+    description = Column(String)
+
+# Database Setup
+engine = create_async_engine(DATABASE_URL, echo=False)
+AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
-    print("Database tables created successfully.")
-
-if __name__ == "__main__":
-    asyncio.run(init_db())

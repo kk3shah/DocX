@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from processing.analytics_logic import calculate_admin_tax
+from processing.analytics_logic import calculate_admin_tax, calculate_historical_admin_tax
 from ingestion.database import AsyncSessionLocal, LobbyingEntry
 from sqlalchemy import select
 import logging
@@ -22,8 +22,12 @@ async def health_check():
     return {"status": "ok"}
 
 @app.get("/api/admin-tax")
-async def get_admin_tax():
-    return await calculate_admin_tax()
+async def get_admin_tax(year: int = None):
+    return await calculate_admin_tax(year)
+
+@app.get("/api/trends/admin-tax")
+async def get_historical_admin_tax():
+    return await calculate_historical_admin_tax()
 
 @app.get("/api/lobbying-network")
 async def get_lobbying_network():
