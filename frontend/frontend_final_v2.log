@@ -1,0 +1,74 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.246:3000
+
+✓ Starting...
+✓ Ready in 601ms
+⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⨯ ./app/page.tsx:115:67
+Parsing ecmascript source code failed
+[0m [90m 113 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 114 |[39m                                 [33m<[39m[33mp[39m className[33m=[39m[32m"text-neutral-500 text-sm"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 115 |[39m                                     [33mTotal[39m analyzed [35m2023[39m salaries ([33m>[39m $100k) [36mfor[39m non[33m-[39mclinical[33m/[39madmin roles[33m.[39m
+ [90m     |[39m                                                                   [31m[1m^[22m[39m
+ [90m 116 |[39m                                 [33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 117 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 118 |[39m                         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+
+./app/page.tsx:169:67
+Parsing ecmascript source code failed
+[0m [90m 167 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 168 |[39m                                 [33m<[39m[33mp[39m className[33m=[39m[32m"text-neutral-500 text-sm"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 169 |[39m                                     [33mTotal[39m analyzed [35m2023[39m salaries ([33m>[39m $100k) [36mfor[39m frontline clinical roles[33m.[39m
+ [90m     |[39m                                                                   [31m[1m^[22m[39m
+ [90m 170 |[39m                                 [33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 171 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 172 |[39m                         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+ GET / 500 in 1173ms (compile: 1115ms, render: 58ms)
+⨯ ./app/page.tsx:115:67
+Parsing ecmascript source code failed
+[0m [90m 113 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 114 |[39m                                 [33m<[39m[33mp[39m className[33m=[39m[32m"text-neutral-500 text-sm"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 115 |[39m                                     [33mTotal[39m analyzed [35m2023[39m salaries ([33m>[39m $100k) [36mfor[39m non[33m-[39mclinical[33m/[39madmin roles[33m.[39m
+ [90m     |[39m                                                                   [31m[1m^[22m[39m
+ [90m 116 |[39m                                 [33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 117 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 118 |[39m                         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+
+./app/page.tsx:169:67
+Parsing ecmascript source code failed
+[0m [90m 167 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 168 |[39m                                 [33m<[39m[33mp[39m className[33m=[39m[32m"text-neutral-500 text-sm"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 169 |[39m                                     [33mTotal[39m analyzed [35m2023[39m salaries ([33m>[39m $100k) [36mfor[39m frontline clinical roles[33m.[39m
+ [90m     |[39m                                                                   [31m[1m^[22m[39m
+ [90m 170 |[39m                                 [33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 171 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 172 |[39m                         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+ GET / 500 in 35ms (compile: 25ms, render: 10ms)
+✓ Compiled in 209ms
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET / 200 in 485ms (compile: 291ms, render: 194ms)

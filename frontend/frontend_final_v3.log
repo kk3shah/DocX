@@ -1,0 +1,18 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.246:3000
+
+✓ Starting...
+✓ Ready in 479ms
+⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET / 200 in 316ms (compile: 201ms, render: 115ms)
+✓ Compiled in 575ms

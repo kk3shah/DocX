@@ -1,0 +1,32 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.246:3000
+
+✓ Starting...
+✓ Ready in 618ms
+⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⨯ ./app/page.tsx:237:97
+Parsing ecmascript source code failed
+[0m [90m 235 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 236 |[39m                                 [33m<[39m[33mp[39m className[33m=[39m[32m"text-neutral-500 text-sm"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 237 |[39m                                     [33mThe[39m only spending fully transparent to the [36mpublic[39m ([33mSalaries[39m [33m>[39m $100k)[33m.[39m
+ [90m     |[39m                                                                                                 [31m[1m^[22m[39m
+ [90m 238 |[39m                                 [33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 239 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 240 |[39m                         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+
+ GET / 500 in 952ms (compile: 897ms, render: 55ms)
+✓ Compiled in 132ms
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET / 200 in 483ms (compile: 297ms, render: 186ms)

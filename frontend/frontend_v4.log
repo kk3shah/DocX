@@ -1,0 +1,12 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 74082, using available port 3002 instead.
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3002
+- Network:       http://10.0.0.246:3002
+
+✓ Starting...
+✓ Ready in 717ms
+[?25h

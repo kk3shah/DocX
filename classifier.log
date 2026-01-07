@@ -1,0 +1,455 @@
+2026-01-06 21:45:08,471 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,473 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,473 INFO sqlalchemy.engine.Engine [generated in 0.00015s] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00015s] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,534 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,534 INFO sqlalchemy.engine.Engine [generated in 0.00618s] [('Bureaucracy', 101), ('Bureaucracy', 102), ('Bureaucracy', 103), ('Bureaucracy', 104), ('Bureaucracy', 105), ('Bureaucracy', 106), ('Bureaucracy', 107), ('Bureaucracy', 108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 5099), ('Bureaucracy', 5100)]
+INFO:sqlalchemy.engine.Engine:[generated in 0.00618s] [('Bureaucracy', 101), ('Bureaucracy', 102), ('Bureaucracy', 103), ('Bureaucracy', 104), ('Bureaucracy', 105), ('Bureaucracy', 106), ('Bureaucracy', 107), ('Bureaucracy', 108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 5099), ('Bureaucracy', 5100)]
+2026-01-06 21:45:08,555 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,557 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,557 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,558 INFO sqlalchemy.engine.Engine [cached since 0.08472s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.08472s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,609 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,609 INFO sqlalchemy.engine.Engine [cached since 0.08104s ago] [('Unclassified', 5101), ('Bureaucracy', 5102), ('Bureaucracy', 5103), ('Bureaucracy', 5104), ('Bureaucracy', 5105), ('Bureaucracy', 5106), ('Bureaucracy', 5107), ('Bureaucracy', 5108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 10099), ('Bureaucracy', 10100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.08104s ago] [('Unclassified', 5101), ('Bureaucracy', 5102), ('Bureaucracy', 5103), ('Bureaucracy', 5104), ('Bureaucracy', 5105), ('Bureaucracy', 5106), ('Bureaucracy', 5107), ('Bureaucracy', 5108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 10099), ('Bureaucracy', 10100)]
+2026-01-06 21:45:08,627 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,630 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,630 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,630 INFO sqlalchemy.engine.Engine [cached since 0.1571s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.1571s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,693 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,693 INFO sqlalchemy.engine.Engine [cached since 0.165s ago] [('Support', 10101), ('Unclassified', 10102), ('Bureaucracy', 10103), ('Bureaucracy', 10104), ('Bureaucracy', 10105), ('Bureaucracy', 10106), ('Bureaucracy', 10107), ('Clinical', 10108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 15099), ('Bureaucracy', 15100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.165s ago] [('Support', 10101), ('Unclassified', 10102), ('Bureaucracy', 10103), ('Bureaucracy', 10104), ('Bureaucracy', 10105), ('Bureaucracy', 10106), ('Bureaucracy', 10107), ('Clinical', 10108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 15099), ('Bureaucracy', 15100)]
+2026-01-06 21:45:08,711 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,715 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,715 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,715 INFO sqlalchemy.engine.Engine [cached since 0.2421s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.2421s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,769 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,769 INFO sqlalchemy.engine.Engine [cached since 0.2413s ago] [('Bureaucracy', 15101), ('Unclassified', 15102), ('Bureaucracy', 15103), ('Unclassified', 15104), ('Bureaucracy', 15105), ('Bureaucracy', 15106), ('Unclassified', 15107), ('Bureaucracy', 15108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 20099), ('Clinical', 20100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.2413s ago] [('Bureaucracy', 15101), ('Unclassified', 15102), ('Bureaucracy', 15103), ('Unclassified', 15104), ('Bureaucracy', 15105), ('Bureaucracy', 15106), ('Unclassified', 15107), ('Bureaucracy', 15108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 20099), ('Clinical', 20100)]
+2026-01-06 21:45:08,787 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,793 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,793 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,793 INFO sqlalchemy.engine.Engine [cached since 0.3205s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.3205s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,850 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,850 INFO sqlalchemy.engine.Engine [cached since 0.3216s ago] [('Unclassified', 20101), ('Bureaucracy', 20102), ('Bureaucracy', 20103), ('Bureaucracy', 20104), ('Bureaucracy', 20105), ('Support', 20106), ('Bureaucracy', 20107), ('Bureaucracy', 20108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Support', 25099), ('Unclassified', 25100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.3216s ago] [('Unclassified', 20101), ('Bureaucracy', 20102), ('Bureaucracy', 20103), ('Bureaucracy', 20104), ('Bureaucracy', 20105), ('Support', 20106), ('Bureaucracy', 20107), ('Bureaucracy', 20108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Support', 25099), ('Unclassified', 25100)]
+2026-01-06 21:45:08,868 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,871 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,871 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,871 INFO sqlalchemy.engine.Engine [cached since 0.398s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.398s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:08,939 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:08,939 INFO sqlalchemy.engine.Engine [cached since 0.4106s ago] [('Bureaucracy', 25101), ('Bureaucracy', 25102), ('Unclassified', 25103), ('Unclassified', 25104), ('Unclassified', 25105), ('Unclassified', 25106), ('Unclassified', 25107), ('Unclassified', 25108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 30099), ('Unclassified', 30100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.4106s ago] [('Bureaucracy', 25101), ('Bureaucracy', 25102), ('Unclassified', 25103), ('Unclassified', 25104), ('Unclassified', 25105), ('Unclassified', 25106), ('Unclassified', 25107), ('Unclassified', 25108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 30099), ('Unclassified', 30100)]
+2026-01-06 21:45:08,957 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:08,960 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:08,960 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:08,960 INFO sqlalchemy.engine.Engine [cached since 0.4877s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.4877s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,020 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,020 INFO sqlalchemy.engine.Engine [cached since 0.4923s ago] [('Bureaucracy', 30101), ('Unclassified', 30102), ('Unclassified', 30103), ('Unclassified', 30104), ('Unclassified', 30105), ('Unclassified', 30106), ('Unclassified', 30107), ('Unclassified', 30108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 35099), ('Bureaucracy', 35100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.4923s ago] [('Bureaucracy', 30101), ('Unclassified', 30102), ('Unclassified', 30103), ('Unclassified', 30104), ('Unclassified', 30105), ('Unclassified', 30106), ('Unclassified', 30107), ('Unclassified', 30108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 35099), ('Bureaucracy', 35100)]
+2026-01-06 21:45:09,039 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,041 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,041 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,041 INFO sqlalchemy.engine.Engine [cached since 0.5681s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.5681s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,100 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,100 INFO sqlalchemy.engine.Engine [cached since 0.5719s ago] [('Unclassified', 35101), ('Bureaucracy', 35102), ('Unclassified', 35103), ('Unclassified', 35104), ('Unclassified', 35105), ('Unclassified', 35106), ('Unclassified', 35107), ('Unclassified', 35108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 40099), ('Bureaucracy', 40100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.5719s ago] [('Unclassified', 35101), ('Bureaucracy', 35102), ('Unclassified', 35103), ('Unclassified', 35104), ('Unclassified', 35105), ('Unclassified', 35106), ('Unclassified', 35107), ('Unclassified', 35108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 40099), ('Bureaucracy', 40100)]
+2026-01-06 21:45:09,118 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,121 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,121 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,121 INFO sqlalchemy.engine.Engine [cached since 0.6483s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.6483s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,192 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,192 INFO sqlalchemy.engine.Engine [cached since 0.6637s ago] [('Unclassified', 40101), ('Unclassified', 40102), ('Unclassified', 40103), ('Support', 40104), ('Unclassified', 40105), ('Unclassified', 40106), ('Bureaucracy', 40107), ('Bureaucracy', 40108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 45099), ('Unclassified', 45100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.6637s ago] [('Unclassified', 40101), ('Unclassified', 40102), ('Unclassified', 40103), ('Support', 40104), ('Unclassified', 40105), ('Unclassified', 40106), ('Bureaucracy', 40107), ('Bureaucracy', 40108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 45099), ('Unclassified', 45100)]
+2026-01-06 21:45:09,210 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,212 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,212 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,212 INFO sqlalchemy.engine.Engine [cached since 0.7392s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.7392s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,269 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,269 INFO sqlalchemy.engine.Engine [cached since 0.7406s ago] [('Unclassified', 45101), ('Unclassified', 45102), ('Unclassified', 45103), ('Unclassified', 45104), ('Unclassified', 45105), ('Bureaucracy', 45106), ('Unclassified', 45107), ('Unclassified', 45108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 50099), ('Bureaucracy', 50100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.7406s ago] [('Unclassified', 45101), ('Unclassified', 45102), ('Unclassified', 45103), ('Unclassified', 45104), ('Unclassified', 45105), ('Bureaucracy', 45106), ('Unclassified', 45107), ('Unclassified', 45108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 50099), ('Bureaucracy', 50100)]
+2026-01-06 21:45:09,286 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,291 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,291 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,291 INFO sqlalchemy.engine.Engine [cached since 0.8179s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.8179s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,348 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,348 INFO sqlalchemy.engine.Engine [cached since 0.8195s ago] [('Clinical', 50101), ('Clinical', 50102), ('Bureaucracy', 50103), ('Unclassified', 50104), ('Unclassified', 50105), ('Unclassified', 50106), ('Unclassified', 50107), ('Unclassified', 50108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 55099), ('Unclassified', 55100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.8195s ago] [('Clinical', 50101), ('Clinical', 50102), ('Bureaucracy', 50103), ('Unclassified', 50104), ('Unclassified', 50105), ('Unclassified', 50106), ('Unclassified', 50107), ('Unclassified', 50108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 55099), ('Unclassified', 55100)]
+2026-01-06 21:45:09,365 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,368 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,368 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,369 INFO sqlalchemy.engine.Engine [cached since 0.8958s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 0.8958s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,443 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,443 INFO sqlalchemy.engine.Engine [cached since 0.9148s ago] [('Unclassified', 55101), ('Unclassified', 55102), ('Unclassified', 55103), ('Unclassified', 55104), ('Unclassified', 55105), ('Unclassified', 55106), ('Unclassified', 55107), ('Unclassified', 55108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 60099), ('Support', 60100)]
+INFO:sqlalchemy.engine.Engine:[cached since 0.9148s ago] [('Unclassified', 55101), ('Unclassified', 55102), ('Unclassified', 55103), ('Unclassified', 55104), ('Unclassified', 55105), ('Unclassified', 55106), ('Unclassified', 55107), ('Unclassified', 55108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 60099), ('Support', 60100)]
+2026-01-06 21:45:09,465 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,473 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,473 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,473 INFO sqlalchemy.engine.Engine [cached since 1s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,562 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,562 INFO sqlalchemy.engine.Engine [cached since 1.034s ago] [('Unclassified', 60101), ('Unclassified', 60102), ('Unclassified', 60103), ('Unclassified', 60104), ('Unclassified', 60105), ('Unclassified', 60106), ('Support', 60107), ('Unclassified', 60108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 65099), ('Bureaucracy', 65100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.034s ago] [('Unclassified', 60101), ('Unclassified', 60102), ('Unclassified', 60103), ('Unclassified', 60104), ('Unclassified', 60105), ('Unclassified', 60106), ('Support', 60107), ('Unclassified', 60108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 65099), ('Bureaucracy', 65100)]
+2026-01-06 21:45:09,581 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,584 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,584 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,584 INFO sqlalchemy.engine.Engine [cached since 1.112s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.112s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,660 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,660 INFO sqlalchemy.engine.Engine [cached since 1.132s ago] [('Unclassified', 65101), ('Unclassified', 65102), ('Unclassified', 65103), ('Unclassified', 65104), ('Unclassified', 65105), ('Unclassified', 65106), ('Unclassified', 65107), ('Unclassified', 65108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 70099), ('Unclassified', 70100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.132s ago] [('Unclassified', 65101), ('Unclassified', 65102), ('Unclassified', 65103), ('Unclassified', 65104), ('Unclassified', 65105), ('Unclassified', 65106), ('Unclassified', 65107), ('Unclassified', 65108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 70099), ('Unclassified', 70100)]
+2026-01-06 21:45:09,692 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,698 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,699 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,699 INFO sqlalchemy.engine.Engine [cached since 1.226s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.226s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,779 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,779 INFO sqlalchemy.engine.Engine [cached since 1.25s ago] [('Unclassified', 70101), ('Unclassified', 70102), ('Unclassified', 70103), ('Unclassified', 70104), ('Unclassified', 70105), ('Unclassified', 70106), ('Unclassified', 70107), ('Unclassified', 70108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 75099), ('Unclassified', 75100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.25s ago] [('Unclassified', 70101), ('Unclassified', 70102), ('Unclassified', 70103), ('Unclassified', 70104), ('Unclassified', 70105), ('Unclassified', 70106), ('Unclassified', 70107), ('Unclassified', 70108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 75099), ('Unclassified', 75100)]
+2026-01-06 21:45:09,798 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,801 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,801 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,801 INFO sqlalchemy.engine.Engine [cached since 1.328s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.328s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,873 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,873 INFO sqlalchemy.engine.Engine [cached since 1.345s ago] [('Bureaucracy', 75101), ('Bureaucracy', 75102), ('Unclassified', 75103), ('Unclassified', 75104), ('Unclassified', 75105), ('Unclassified', 75106), ('Unclassified', 75107), ('Unclassified', 75108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 80099), ('Unclassified', 80100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.345s ago] [('Bureaucracy', 75101), ('Bureaucracy', 75102), ('Unclassified', 75103), ('Unclassified', 75104), ('Unclassified', 75105), ('Unclassified', 75106), ('Unclassified', 75107), ('Unclassified', 75108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 80099), ('Unclassified', 80100)]
+2026-01-06 21:45:09,901 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:09,907 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:09,908 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:09,908 INFO sqlalchemy.engine.Engine [cached since 1.435s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.435s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:09,979 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:09,979 INFO sqlalchemy.engine.Engine [cached since 1.451s ago] [('Unclassified', 80101), ('Bureaucracy', 80102), ('Unclassified', 80103), ('Unclassified', 80104), ('Bureaucracy', 80105), ('Bureaucracy', 80106), ('Support', 80107), ('Bureaucracy', 80108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 85099), ('Unclassified', 85100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.451s ago] [('Unclassified', 80101), ('Bureaucracy', 80102), ('Unclassified', 80103), ('Unclassified', 80104), ('Bureaucracy', 80105), ('Bureaucracy', 80106), ('Support', 80107), ('Bureaucracy', 80108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Unclassified', 85099), ('Unclassified', 85100)]
+2026-01-06 21:45:10,003 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:10,006 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,006 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,006 INFO sqlalchemy.engine.Engine [cached since 1.533s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.533s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:10,086 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:10,086 INFO sqlalchemy.engine.Engine [cached since 1.558s ago] [('Unclassified', 85101), ('Unclassified', 85102), ('Unclassified', 85103), ('Unclassified', 85104), ('Unclassified', 85105), ('Unclassified', 85106), ('Unclassified', 85107), ('Unclassified', 85108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 90099), ('Unclassified', 90100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.558s ago] [('Unclassified', 85101), ('Unclassified', 85102), ('Unclassified', 85103), ('Unclassified', 85104), ('Unclassified', 85105), ('Unclassified', 85106), ('Unclassified', 85107), ('Unclassified', 85108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 90099), ('Unclassified', 90100)]
+2026-01-06 21:45:10,106 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:10,108 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,108 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,108 INFO sqlalchemy.engine.Engine [cached since 1.636s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.636s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:10,173 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:10,173 INFO sqlalchemy.engine.Engine [cached since 1.645s ago] [('Bureaucracy', 90101), ('Unclassified', 90102), ('Unclassified', 90103), ('Unclassified', 90104), ('Unclassified', 90105), ('Unclassified', 90106), ('Unclassified', 90107), ('Bureaucracy', 90108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Clinical', 95099), ('Bureaucracy', 95100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.645s ago] [('Bureaucracy', 90101), ('Unclassified', 90102), ('Unclassified', 90103), ('Unclassified', 90104), ('Unclassified', 90105), ('Unclassified', 90106), ('Unclassified', 90107), ('Bureaucracy', 90108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Clinical', 95099), ('Bureaucracy', 95100)]
+2026-01-06 21:45:10,191 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:10,193 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,193 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,193 INFO sqlalchemy.engine.Engine [cached since 1.72s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.72s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:10,253 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:10,253 INFO sqlalchemy.engine.Engine [cached since 1.724s ago] [('Bureaucracy', 95101), ('Bureaucracy', 95102), ('Bureaucracy', 95103), ('Clinical', 95104), ('Clinical', 95105), ('Clinical', 95106), ('Clinical', 95107), ('Clinical', 95108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 100099), ('Clinical', 100100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.724s ago] [('Bureaucracy', 95101), ('Bureaucracy', 95102), ('Bureaucracy', 95103), ('Clinical', 95104), ('Clinical', 95105), ('Clinical', 95106), ('Clinical', 95107), ('Clinical', 95108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 100099), ('Clinical', 100100)]
+2026-01-06 21:45:10,270 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:10,272 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,273 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,273 INFO sqlalchemy.engine.Engine [cached since 1.8s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.8s ago] (5000, 0)
+INFO:__main__:Classifying next 5000 titles...
+2026-01-06 21:45:10,354 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:10,354 INFO sqlalchemy.engine.Engine [cached since 1.826s ago] [('Unclassified', 100101), ('Clinical', 100102), ('Unclassified', 100103), ('Unclassified', 100104), ('Bureaucracy', 100105), ('Unclassified', 100106), ('Bureaucracy', 100107), ('Unclassified', 100108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 105099), ('Bureaucracy', 105100)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.826s ago] [('Unclassified', 100101), ('Clinical', 100102), ('Unclassified', 100103), ('Unclassified', 100104), ('Bureaucracy', 100105), ('Unclassified', 100106), ('Bureaucracy', 100107), ('Unclassified', 100108)  ... displaying 10 of 5000 total bound parameter sets ...  ('Bureaucracy', 105099), ('Bureaucracy', 105100)]
+2026-01-06 21:45:10,372 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 5000 entries.
+2026-01-06 21:45:10,376 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,376 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,376 INFO sqlalchemy.engine.Engine [cached since 1.904s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.904s ago] (5000, 0)
+INFO:__main__:Classifying next 3840 titles...
+2026-01-06 21:45:10,423 INFO sqlalchemy.engine.Engine UPDATE salaries SET role_category=? WHERE salaries.id = ?
+INFO:sqlalchemy.engine.Engine:UPDATE salaries SET role_category=? WHERE salaries.id = ?
+2026-01-06 21:45:10,423 INFO sqlalchemy.engine.Engine [cached since 1.895s ago] [('Bureaucracy', 105101), ('Bureaucracy', 105102), ('Clinical', 105103), ('Clinical', 105104), ('Clinical', 105105), ('Clinical', 105106), ('Bureaucracy', 105107), ('Bureaucracy', 105108)  ... displaying 10 of 3840 total bound parameter sets ...  ('Bureaucracy', 108939), ('Bureaucracy', 108940)]
+INFO:sqlalchemy.engine.Engine:[cached since 1.895s ago] [('Bureaucracy', 105101), ('Bureaucracy', 105102), ('Clinical', 105103), ('Clinical', 105104), ('Clinical', 105105), ('Clinical', 105106), ('Bureaucracy', 105107), ('Bureaucracy', 105108)  ... displaying 10 of 3840 total bound parameter sets ...  ('Bureaucracy', 108939), ('Bureaucracy', 108940)]
+2026-01-06 21:45:10,438 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:__main__:Updated 3840 entries.
+2026-01-06 21:45:10,441 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-01-06 21:45:10,441 INFO sqlalchemy.engine.Engine SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+INFO:sqlalchemy.engine.Engine:SELECT salaries.id, salaries.year, salaries.sector, salaries.employer, salaries.job_title, salaries.salary_paid, salaries.taxable_benefits, salaries.role_category 
+FROM salaries 
+WHERE salaries.role_category IS NULL
+ LIMIT ? OFFSET ?
+2026-01-06 21:45:10,441 INFO sqlalchemy.engine.Engine [cached since 1.968s ago] (5000, 0)
+INFO:sqlalchemy.engine.Engine:[cached since 1.968s ago] (5000, 0)
+INFO:__main__:No more unclassified roles found. Classification complete.
+2026-01-06 21:45:10,453 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:sqlalchemy.engine.Engine:ROLLBACK

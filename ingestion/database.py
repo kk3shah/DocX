@@ -5,7 +5,7 @@ from sqlalchemy import Column, Integer, String, Float, Date, DateTime, Boolean, 
 import asyncio
 
 # Database URL from environment variable or default
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+asyncpg://user:password@localhost:5432/healthcare_project")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./healthcare.db")
 
 engine = create_async_engine(DATABASE_URL, echo=True)
 AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)

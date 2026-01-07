@@ -53,31 +53,32 @@ def classify_title(title: str) -> str:
     return "Unclassified"
 
 async def classify_roles_keywords():
-    async with AsyncSessionLocal() as session:
-        # Fetch unclassified roles
-        result = await session.execute(
-            select(SalaryEntry).where(SalaryEntry.role_category == None).limit(BATCH_SIZE)
-        )
-        entries = result.scalars().all()
-        
-        if not entries:
-            logger.info("No unclassified roles found.")
-            return
+    while True:
+        async with AsyncSessionLocal() as session:
+            # Fetch unclassified roles in larger batches
+            result = await session.execute(
+                select(SalaryEntry).where(SalaryEntry.role_category == None).limit(5000)
+            )
+            entries = result.scalars().all()
+            
+            if not entries:
+                logger.info("No more unclassified roles found. Classification complete.")
+                break
 
-        logger.info(f"Classifying {len(entries)} titles using keywords...")
-        
-        updates = 0
-        for entry in entries:
-            category = classify_title(entry.job_title)
-            if category:
-                entry.role_category = category
-                updates += 1
-        
-        if updates:
-            await session.commit()
-            logger.info(f"Updated {updates} entries.")
-        else:
-             logger.info("No updates made.")
+            logger.info(f"Classifying next {len(entries)} titles...")
+            
+            updates = 0
+            for entry in entries:
+                category = classify_title(entry.job_title)
+                if category:
+                    entry.role_category = category
+                    updates += 1
+            
+            if updates:
+                await session.commit()
+                logger.info(f"Updated {updates} entries.")
+            else:
+                 logger.info("No updates made in this batch.")
 
 if __name__ == "__main__":
     asyncio.run(classify_roles_keywords())

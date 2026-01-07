@@ -1,0 +1,196 @@
+INFO:     Started server process [71256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-06 21:46:35,885 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:46:35,889 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:46:35,889 INFO sqlalchemy.engine.Engine [generated in 0.00046s] ('Clinical',)
+2026-01-06 21:46:40,257 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:46:40,258 INFO sqlalchemy.engine.Engine [cached since 4.37s ago] ('Bureaucracy',)
+2026-01-06 21:46:40,270 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53664 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:47:52,341 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:47:52,343 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:47:52,343 INFO sqlalchemy.engine.Engine [cached since 76.46s ago] ('Clinical',)
+2026-01-06 21:47:52,351 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:47:52,352 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:47:52,352 INFO sqlalchemy.engine.Engine [generated in 0.00025s] ()
+2026-01-06 21:47:52,358 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53701 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:47:52,386 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:47:52,386 INFO sqlalchemy.engine.Engine [cached since 76.5s ago] ('Bureaucracy',)
+2026-01-06 21:47:52,399 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53700 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:49:10,182 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:49:10,183 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:49:10,183 INFO sqlalchemy.engine.Engine [cached since 154.3s ago] ('Clinical',)
+2026-01-06 21:49:10,200 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:49:10,200 INFO sqlalchemy.engine.Engine [cached since 154.3s ago] ('Bureaucracy',)
+2026-01-06 21:49:10,217 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53734 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:49:13,988 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:49:14,149 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:49:14,154 INFO sqlalchemy.engine.Engine [cached since 158.3s ago] ('Clinical',)
+2026-01-06 21:49:14,155 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:49:14,156 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:49:14,646 INFO sqlalchemy.engine.Engine [cached since 82.29s ago] ()
+2026-01-06 21:49:14,650 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53748 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:49:15,227 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:49:15,271 INFO sqlalchemy.engine.Engine [cached since 159.4s ago] ('Bureaucracy',)
+2026-01-06 21:49:15,320 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53747 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:51:49,443 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:51:49,445 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:51:49,445 INFO sqlalchemy.engine.Engine [cached since 313.6s ago] ('Clinical',)
+2026-01-06 21:51:49,449 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:51:49,450 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:51:49,450 INFO sqlalchemy.engine.Engine [cached since 237.1s ago] ()
+2026-01-06 21:51:49,464 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53828 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:51:49,500 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:51:49,500 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:51:49,500 INFO sqlalchemy.engine.Engine [cached since 237.2s ago] ()
+2026-01-06 21:51:49,501 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53828 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:51:49,732 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:51:49,732 INFO sqlalchemy.engine.Engine [cached since 313.8s ago] ('Bureaucracy',)
+2026-01-06 21:51:49,756 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53827 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:51:49,757 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:51:49,757 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:51:49,757 INFO sqlalchemy.engine.Engine [cached since 313.9s ago] ('Clinical',)
+2026-01-06 21:51:49,782 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:51:49,782 INFO sqlalchemy.engine.Engine [cached since 313.9s ago] ('Bureaucracy',)
+2026-01-06 21:51:49,806 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53827 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:52:18,325 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:18,326 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:18,326 INFO sqlalchemy.engine.Engine [cached since 342.4s ago] ('Clinical',)
+2026-01-06 21:52:18,328 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:18,329 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:52:18,329 INFO sqlalchemy.engine.Engine [cached since 266s ago] ()
+2026-01-06 21:52:18,331 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53871 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:52:18,333 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:18,333 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:52:18,333 INFO sqlalchemy.engine.Engine [cached since 266s ago] ()
+2026-01-06 21:52:18,334 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53871 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:52:18,416 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:18,416 INFO sqlalchemy.engine.Engine [cached since 342.5s ago] ('Bureaucracy',)
+2026-01-06 21:52:18,439 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53870 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:52:18,441 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:18,441 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:18,441 INFO sqlalchemy.engine.Engine [cached since 342.6s ago] ('Clinical',)
+2026-01-06 21:52:18,467 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:18,467 INFO sqlalchemy.engine.Engine [cached since 342.6s ago] ('Bureaucracy',)
+2026-01-06 21:52:18,490 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53870 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:52:56,744 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:56,748 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:56,750 INFO sqlalchemy.engine.Engine [cached since 380.9s ago] ('Clinical',)
+2026-01-06 21:52:56,753 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:52:56,754 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:52:56,757 INFO sqlalchemy.engine.Engine [cached since 304.4s ago] ()
+2026-01-06 21:52:56,775 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53892 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:52:57,225 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:52:57,225 INFO sqlalchemy.engine.Engine [cached since 381.3s ago] ('Bureaucracy',)
+2026-01-06 21:52:57,254 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53891 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:55:54,669 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:55:54,674 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:55:54,674 INFO sqlalchemy.engine.Engine [cached since 558.8s ago] ('Clinical',)
+2026-01-06 21:55:54,827 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:55:54,827 INFO sqlalchemy.engine.Engine [cached since 558.9s ago] ('Bureaucracy',)
+2026-01-06 21:55:54,851 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54000 - "GET /api/admin-tax HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54000 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2026-01-06 21:57:52,833 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:57:52,834 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:57:52,834 INFO sqlalchemy.engine.Engine [cached since 677s ago] ('Clinical',)
+2026-01-06 21:57:52,836 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:57:52,837 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:57:52,837 INFO sqlalchemy.engine.Engine [cached since 600.5s ago] ()
+2026-01-06 21:57:52,851 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54091 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:57:52,997 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:57:52,997 INFO sqlalchemy.engine.Engine [cached since 677.1s ago] ('Bureaucracy',)
+2026-01-06 21:57:53,019 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54090 - "GET /api/admin-tax HTTP/1.1" 200 OK
+2026-01-06 21:59:05,903 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:59:05,905 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:59:05,905 INFO sqlalchemy.engine.Engine [cached since 750s ago] ('Clinical',)
+2026-01-06 21:59:05,906 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 21:59:05,906 INFO sqlalchemy.engine.Engine SELECT wait_times.id, wait_times.date_recorded, wait_times.procedure_type, wait_times.hospital_name, wait_times.median_wait_days, wait_times.province 
+FROM wait_times
+2026-01-06 21:59:05,907 INFO sqlalchemy.engine.Engine [cached since 673.6s ago] ()
+2026-01-06 21:59:05,911 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54174 - "GET /api/waitlist-impact HTTP/1.1" 200 OK
+2026-01-06 21:59:06,089 INFO sqlalchemy.engine.Engine SELECT sum(salaries.salary_paid) AS sum_1 
+FROM salaries 
+WHERE salaries.role_category = ?
+2026-01-06 21:59:06,089 INFO sqlalchemy.engine.Engine [cached since 750.2s ago] ('Bureaucracy',)
+2026-01-06 21:59:06,111 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:54173 - "GET /api/admin-tax HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54185 - "HEAD /api/admin-tax HTTP/1.1" 405 Method Not Allowed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [71256]

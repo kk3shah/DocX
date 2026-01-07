@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from processing.analytics_logic import calculate_admin_tax, calculate_waitlist_impact
+from processing.analytics_logic import calculate_admin_tax
 from ingestion.database import AsyncSessionLocal, LobbyingEntry
 from sqlalchemy import select
 import logging
@@ -10,7 +10,8 @@ app = FastAPI(title="Healthcare Accountability Project API")
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    # Allow both localhost forms to be safe
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -23,10 +24,6 @@ async def health_check():
 @app.get("/api/admin-tax")
 async def get_admin_tax():
     return await calculate_admin_tax()
-
-@app.get("/api/waitlist-impact")
-async def get_waitlist_impact():
-    return await calculate_waitlist_impact()
 
 @app.get("/api/lobbying-network")
 async def get_lobbying_network():

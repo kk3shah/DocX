@@ -1,8 +1,6 @@
 playwright
 fastapi
 uvicorn
-fastapi
-uvicorn
 pandas
 asyncpg
 beautifulsoup4
@@ -12,3 +10,4 @@ psycopg2-binary
 pytest
 pymupdf
 unstructured
+requests
