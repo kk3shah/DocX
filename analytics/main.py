@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from processing.analytics_logic import calculate_admin_tax, calculate_historical_admin_tax
+from processing.analytics_logic import calculate_admin_tax, calculate_historical_admin_tax, get_budget_breakdown
 from ingestion.database import AsyncSessionLocal, LobbyingEntry
 from sqlalchemy import select
 import logging
@@ -28,6 +28,15 @@ async def get_admin_tax(year: int = None):
 @app.get("/api/trends/admin-tax")
 async def get_historical_admin_tax():
     return await calculate_historical_admin_tax()
+
+@app.get("/api/trends/budget")
+async def get_budget_trends():
+    from processing.analytics_logic import get_historical_budget_trends
+    return await get_historical_budget_trends()
+
+@app.get("/api/budget/breakdown")
+async def get_budget_data(year: int = 2023):
+    return await get_budget_breakdown(year)
 
 @app.get("/api/lobbying-network")
 async def get_lobbying_network():

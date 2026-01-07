@@ -180,6 +180,66 @@ async def calculate_historical_admin_tax():
         
         return history
 
+async def get_budget_breakdown(year: int = 2023):
+    """
+    Retrieves the granular budget breakdown for a specific year.
+    """
+    from ingestion.database import BudgetBreakdown
+    async with AsyncSessionLocal() as session:
+        stmt = select(BudgetBreakdown).where(BudgetBreakdown.year == year)
+        result = await session.execute(stmt)
+        rows = result.scalars().all()
+        
+        if not rows:
+            return None
+            
+        categories = {}
+        total = 0
+        for row in rows:
+            categories[row.category] = {
+                "amount": row.amount_billions,
+                "description": row.description
+            }
+            total += row.amount_billions
+            
+        return {
+            "year": year,
+            "total_budget_billions": round(total, 2),
+            "categories": categories
+        }
+
+async def get_historical_budget_trends():
+    """
+    Returns the trend of Frontline vs Bureaucratic spending using BudgetBreakdown data.
+    """
+    from ingestion.database import BudgetBreakdown
+    async with AsyncSessionLocal() as session:
+        stmt = select(BudgetBreakdown).order_by(BudgetBreakdown.year)
+        result = await session.execute(stmt)
+        rows = result.scalars().all()
+        
+        yearly_map = {} # {year: {frontline: 0, total: 0}}
+        for r in rows:
+            if r.year not in yearly_map:
+                yearly_map[r.year] = {"frontline": 0, "total": 0}
+            
+            yearly_map[r.year]["total"] += r.amount_billions
+            if r.category == "Frontline":
+                yearly_map[r.year]["frontline"] += r.amount_billions
+
+        history = []
+        for year in sorted(yearly_map.keys()):
+            data = yearly_map[year]
+            history.append({
+                "year": year,
+                "total_budget": round(data["total"], 2),
+                "frontline_care": round(data["frontline"], 2),
+                "bureaucratic_expense": round(data["total"] - data["frontline"], 2),
+                "ratio": round(((data["total"] - data["frontline"]) / data["total"] * 100), 1) if data["total"] > 0 else 0
+            })
+            
+        return history
+
 if __name__ == "__main__":
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
