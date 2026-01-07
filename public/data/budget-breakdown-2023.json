@@ -1,0 +1,22 @@
+{
+  "year": 2023,
+  "total_budget_billions": 85.5,
+  "categories": {
+    "Frontline": {
+      "amount": 59.583,
+      "description": "Spending on: Payments made for services and care provided by physicians and practitioners, Midwifery Services, Ontario Drug Programs, HIV/AIDS and Hepatitis C Programs, Operation of Hospitals..."
+    },
+    "Operations & Agency": {
+      "amount": 6.731,
+      "description": "Spending on: Clinical Education, Independent Health Facilities, Quality Health Initiatives, Assistive Devices and Supplies Program, Official Local Health Agencies..."
+    },
+    "Administrative & Opaque": {
+      "amount": 5.071,
+      "description": "Spending on: No Value, Minister's Salary, the Executive Council Act, Parliamentary Assistant's Salary, the Executive Council Act, Minister without Portfolio's Salary, the Executive Council Act, Parliamentary Assistants' Salaries, the Executive Council Act..."
+    },
+    "General Operations & Other": {
+      "amount": 14.115,
+      "description": "Minor health flows, adjustments, and other provincial health spending (capital, one-time payments)."
+    }
+  }
+}

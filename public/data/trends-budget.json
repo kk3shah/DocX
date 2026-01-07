@@ -1,0 +1,16 @@
+[
+  {
+    "year": 2023,
+    "total_budget": 85.5,
+    "frontline_care": 59.58,
+    "bureaucratic_expense": 25.92,
+    "ratio": 30.3
+  },
+  {
+    "year": 2024,
+    "total_budget": 88.15,
+    "frontline_care": 61.43,
+    "bureaucratic_expense": 26.72,
+    "ratio": 30.3
+  }
+]

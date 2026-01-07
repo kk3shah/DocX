@@ -40,16 +40,16 @@ export default function Dashboard() {
     };
 
     useEffect(() => {
-        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
         async function fetchData() {
             setLoading(true);
             try {
                 const [taxRes, trendsRes, budgetRes, budgetTrendRes] = await Promise.all([
-                    fetch(selectedYear ? `${API_URL}/admin-tax?year=${selectedYear}` : `${API_URL}/admin-tax`).then(res => res.json()),
-                    fetch(`${API_URL}/trends/admin-tax`).then(res => res.json()),
-                    fetch(`${API_URL}/budget/breakdown?year=${selectedYear || 2023}`).then(r => r.json()),
-                    fetch(`${API_URL}/trends/budget`).then(res => res.json())
+                    fetch('/data/admin-tax.json').then(res => res.json()),
+                    fetch('/data/trends-admin-tax.json').then(res => res.json()),
+                    fetch('/data/budget-breakdown-2023.json').then(res => res.json()),
+                    fetch('/data/trends-budget.json').then(res => res.json())
                 ]);
+
 
                 setAdminTax(taxRes);
                 setTrendData(trendsRes);

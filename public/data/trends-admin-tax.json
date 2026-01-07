@@ -1,0 +1,82 @@
+[
+  {
+    "year": 2014,
+    "admin_tax_percentage": 60.84,
+    "total_clinical": 601308205.37,
+    "total_bureaucratic": 934020925.2,
+    "bureaucratic_growth_pct": 0,
+    "clinical_growth_pct": 0
+  },
+  {
+    "year": 2015,
+    "admin_tax_percentage": 58.41,
+    "total_clinical": 706630022.67,
+    "total_bureaucratic": 992341272.21,
+    "bureaucratic_growth_pct": 6.2,
+    "clinical_growth_pct": 17.5
+  },
+  {
+    "year": 2016,
+    "admin_tax_percentage": 57.89,
+    "total_clinical": 722161704.23,
+    "total_bureaucratic": 992808427.54,
+    "bureaucratic_growth_pct": 6.3,
+    "clinical_growth_pct": 20.1
+  },
+  {
+    "year": 2017,
+    "admin_tax_percentage": 54.54,
+    "total_clinical": 896529927.69,
+    "total_bureaucratic": 1075607592.8600001,
+    "bureaucratic_growth_pct": 15.2,
+    "clinical_growth_pct": 49.1
+  },
+  {
+    "year": 2018,
+    "admin_tax_percentage": 51.88,
+    "total_clinical": 1102294525.17,
+    "total_bureaucratic": 1188197621.09,
+    "bureaucratic_growth_pct": 27.2,
+    "clinical_growth_pct": 83.3
+  },
+  {
+    "year": 2019,
+    "admin_tax_percentage": 49.13,
+    "total_clinical": 1343890206.4,
+    "total_bureaucratic": 1297859486.4099998,
+    "bureaucratic_growth_pct": 39.0,
+    "clinical_growth_pct": 123.5
+  },
+  {
+    "year": 2020,
+    "admin_tax_percentage": 39.52,
+    "total_clinical": 1677810006.82,
+    "total_bureaucratic": 1096200969.75,
+    "bureaucratic_growth_pct": 17.4,
+    "clinical_growth_pct": 179.0
+  },
+  {
+    "year": 2021,
+    "admin_tax_percentage": 44.01,
+    "total_clinical": 2105313198.92,
+    "total_bureaucratic": 1655037542.562,
+    "bureaucratic_growth_pct": 77.2,
+    "clinical_growth_pct": 250.1
+  },
+  {
+    "year": 2022,
+    "admin_tax_percentage": 36.86,
+    "total_clinical": 3147595814.889,
+    "total_bureaucratic": 1837148197.146,
+    "bureaucratic_growth_pct": 96.7,
+    "clinical_growth_pct": 423.5
+  },
+  {
+    "year": 2023,
+    "admin_tax_percentage": 36.02,
+    "total_clinical": 4726888203.067,
+    "total_bureaucratic": 2661536081.578,
+    "bureaucratic_growth_pct": 185.0,
+    "clinical_growth_pct": 686.1
+  }
+]
