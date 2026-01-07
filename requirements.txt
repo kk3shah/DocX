@@ -1,7 +1,8 @@
 playwright
 fastapi
 uvicorn
-openai
+fastapi
+uvicorn
 pandas
 asyncpg
 beautifulsoup4

@@ -1,21 +1,58 @@
-import os
 import asyncio
 import logging
-from sqlalchemy import select, update
-from openai import AsyncOpenAI
+from sqlalchemy import select
 from ingestion.database import SalaryEntry, AsyncSessionLocal
-import json
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Initialize OpenAI Client
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+BATCH_SIZE = 100
 
-BATCH_SIZE = 50
+# Keyword mappings for transparent classification
+KEYWORDS = {
+    "Clinical": [
+        "nurse", "doctor", "physician", "surgeon", "rn", "rpn", "psw", "paramedic", 
+        "therapist", "psychologist", "pharmacist", "radiologist", "technologist", 
+        "clinical", "patient", "care", "practitioner", "midwife"
+    ],
+    "Support": [
+        "janitor", "custodian", "maintenance", "it", "technician", "support", 
+        "clerk", "secretary", "admin assistant", "service", "driver", "porter",
+        "cleaner", "cook", "dietary", "laundry"
+    ],
+    "Bureaucracy": [
+        "director", "manager", "executive", "president", "vp", "chief", "officer",
+        "supervisor", "coordinator", "consultant", "analyst", "strategy", "policy",
+        "communications", "advisor", "lead", "head of", "chair", "board"
+    ]
+}
 
-async def classify_roles():
+def classify_title(title: str) -> str:
+    title_lower = title.lower()
+    
+    # Priority check: Clinical > Bureaucracy > Support > Default
+    # We check Clinical first to ensure "Clinical Manager" might arguably still capture clinical context,
+    # though "Manager" is strong bureaucracy. 
+    # Let's refine: "Clinical Manager" is often Bureaucracy in this project's context ("Admin Tax").
+    
+    # Check Bureaucracy first to capture Management roles even if they have clinical backgrounds (e.g. Chief Nursing Officer)
+    # This aligns with the "Administrative Tax" goal.
+    for keyword in KEYWORDS["Bureaucracy"]:
+        if keyword in title_lower:
+            return "Bureaucracy"
+            
+    for keyword in KEYWORDS["Clinical"]:
+        if keyword in title_lower:
+            return "Clinical"
+            
+    for keyword in KEYWORDS["Support"]:
+        if keyword in title_lower:
+            return "Support"
+            
+    return "Unclassified"
+
+async def classify_roles_keywords():
     async with AsyncSessionLocal() as session:
         # Fetch unclassified roles
         result = await session.execute(
@@ -27,59 +64,20 @@ async def classify_roles():
             logger.info("No unclassified roles found.")
             return
 
-        job_titles = [e.job_title for e in entries]
-        ids = [e.id for e in entries]
+        logger.info(f"Classifying {len(entries)} titles using keywords...")
         
-        logger.info(f"Classifying {len(job_titles)} titles...")
-
-        prompt = (
-            "Classify the following job titles into one of three categories: "
-            "'Clinical' (Direct patient care, e.g., Nurse, Doctor, PSW), "
-            "'Support' (Janitorial, IT, Admin Support, Maintenance), "
-            "'Bureaucracy' (Management, Policy, Diversity, Communications, Executive). "
-            "Return a JSON object where keys are the job titles and values are the categories. "
-            f"Job Titles: {json.dumps(job_titles)}"
-        )
-
-        try:
-            response = await client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": "You are a helpful assistant that classifies healthcare job titles."},
-                    {"role": "user", "content": prompt}
-                ],
-                response_format={"type": "json_object"}
-            )
-            
-            content = response.choices[0].message.content
-            classification_map = json.loads(content)
-            
-            # Use 'keys' from the map if present, else try to match raw titles. 
-            # Ideally the LLM returns the exact strings as keys.
-            # Handle potential mismatch gracefully.
-            
-            # In a robust system, we would iterate the map. 
-            # Here we expect the map to cover the requested titles.
-            results_to_update = []
-            
-            for entry in entries:
-                category = classification_map.get(entry.job_title)
-                if category:
-                    # Normalize category if necessary
-                   entry.role_category = category
-                   results_to_update.append(entry)
-            
-            if results_to_update:
-                await session.commit()
-                logger.info(f"Updated {len(results_to_update)} entries.")
-            else:
-                 logger.warning("No entries updated from LLM response.")
-
-        except Exception as e:
-            logger.error(f"Error during classification: {e}")
+        updates = 0
+        for entry in entries:
+            category = classify_title(entry.job_title)
+            if category:
+                entry.role_category = category
+                updates += 1
+        
+        if updates:
+            await session.commit()
+            logger.info(f"Updated {updates} entries.")
+        else:
+             logger.info("No updates made.")
 
 if __name__ == "__main__":
-    if not os.getenv("OPENAI_API_KEY"):
-        logger.error("OPENAI_API_KEY environment variable not set.")
-    else:
-        asyncio.run(classify_roles())
+    asyncio.run(classify_roles_keywords())
